@@ -1,0 +1,9 @@
+;$Id: 
+name = Feeds SimplePie Extended
+description = An extension of the SimplePie parser for Feeds.
+package = Feeds
+dependencies[] = feeds
+core = 6.x
+php = 5.2
+version = "6.x-1.0-dev"
+

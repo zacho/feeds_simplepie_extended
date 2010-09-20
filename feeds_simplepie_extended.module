@@ -1,0 +1,23 @@
+<?php
+/**
+* Implementation of hook_feeds_plugins().
+*/
+function feeds_simplepie_extended_feeds_plugins() {
+  $info = array();
+  $info['FeedsSimplePieParserExtended'] = array(
+    'name' => 'SimplePie parser extended',
+    'description' => 'Extends SimplePie parser to fetch original content.',
+    'handler' => array(
+      'parent' => 'FeedsSimplePieParser', 
+      'class' => 'FeedsSimplePieParserExtended',
+      'file' => 'FeedsSimplePieParserExtended.inc',
+      'path' => drupal_get_path('module', 'feeds_simplepie_extended'),
+    ),
+  );
+  return $info;
+}
+
+function feeds_simplepie_extended_enable() {
+  //clear the cache to display in Feeds as available plugin.
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+}
