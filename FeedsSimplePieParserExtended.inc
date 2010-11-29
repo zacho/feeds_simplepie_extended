@@ -317,10 +317,10 @@ class FeedsSimplePieParserExtended extends FeedsSimplePieParser {
         'description' => t('Prism ISSN'),
       ),
       
-      'link_contents' => array(
-        'name' => t('Link Contents'),
-        'description' => t('Fetched contents of the <Link> of the feed item.'),
-      ),
+      // 'link_contents' => array(
+      //   'name' => t('Link Contents'),
+      //   'description' => t('Fetched contents of the <Link> of the feed item.'),
+      // ),
      );
   }
 
