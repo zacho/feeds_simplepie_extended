@@ -28,8 +28,10 @@ class FeedsSimplePieParserExtended extends FeedsSimplePieParser {
     
     $simplepie_feed = $simplepie_item->get_feed();
 
-    foreach ($simplepie_item->get_authors() as $author) {
-      $item['all_authors'][] = $author->get_name();
+    if ($authors = $simplepie_item->get_authors()) {
+      foreach ($authors as $author) {
+        $item['all_authors'][] = $author->get_name();
+      }
     }
 
     if ($value = $simplepie_item->get_item_tags($prism_namespace_2_1,'doi')) {
